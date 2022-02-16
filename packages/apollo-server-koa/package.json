@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/apollographql/apollo-server",
+    "url": "https://github.com/tad78/apollo-server",
     "directory": "packages/apollo-server-koa"
   },
   "keywords": [
@@ -19,9 +19,9 @@
   "author": "Apollo <packages@apollographql.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/apollographql/apollo-server/issues"
+    "url": "https://github.com/tad78/apollo-server/issues"
   },
-  "homepage": "https://github.com/apollographql/apollo-server#readme",
+  "homepage": "https://github.com/tad78/apollo-server#readme",
   "engines": {
     "node": ">=12.0"
   },
