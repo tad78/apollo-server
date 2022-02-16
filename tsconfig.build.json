@@ -7,6 +7,7 @@
   "references": [
     { "path": "./packages/apollo-datasource" },
     { "path": "./packages/apollo-datasource-rest" },
+    { "path": "./packages/apollo-reporting-protobuf" },
     { "path": "./packages/apollo-server" },
     { "path": "./packages/apollo-server-azure-functions" },
     { "path": "./packages/apollo-server-cache-memcached" },
@@ -20,11 +21,13 @@
     { "path": "./packages/apollo-server-express" },
     { "path": "./packages/apollo-server-fastify" },
     { "path": "./packages/apollo-server-hapi" },
+    { "path": "./packages/apollo-server-integration-testsuite" },
     { "path": "./packages/apollo-server-koa" },
     { "path": "./packages/apollo-server-lambda" },
     { "path": "./packages/apollo-server-micro" },
     { "path": "./packages/apollo-server-plugin-base" },
     { "path": "./packages/apollo-server-plugin-operation-registry" },
     { "path": "./packages/apollo-server-plugin-response-cache" },
+    { "path": "./packages/apollo-server-types" },
   ]
 }
