@@ -17,7 +17,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "compile": "tsc && cp src/*.d.ts dist",
-    "prepare": "npm run clean && npm run compile"
+    "prepare": "npm run compile"
   },
   "engines": {
     "node": ">=12.0"
