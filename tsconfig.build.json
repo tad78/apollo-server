@@ -7,7 +7,6 @@
   "references": [
     { "path": "./packages/apollo-datasource" },
     { "path": "./packages/apollo-datasource-rest" },
-    { "path": "./packages/apollo-reporting-protobuf" },
     { "path": "./packages/apollo-server" },
     { "path": "./packages/apollo-server-azure-functions" },
     { "path": "./packages/apollo-server-cache-memcached" },
