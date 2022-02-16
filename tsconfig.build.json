@@ -15,6 +15,7 @@
     { "path": "./packages/apollo-server-cloud-functions" },
     { "path": "./packages/apollo-server-cloudflare" },
     { "path": "./packages/apollo-server-core" },
+    { "path": "./packages/apollo-server-env" },
     { "path": "./packages/apollo-server-errors" },
     { "path": "./packages/apollo-server-express" },
     { "path": "./packages/apollo-server-fastify" },
