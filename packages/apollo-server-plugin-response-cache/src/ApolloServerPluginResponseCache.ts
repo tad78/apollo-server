@@ -11,11 +11,13 @@ import type {
 import { KeyValueCache, PrefixingKeyValueCache } from 'apollo-server-caching';
 import { CacheScope } from 'apollo-server-types';
 
+import { gql } from 'graphql-tag';
 // XXX This should use createSHA from apollo-server-core in order to work on
 // non-Node environments. I'm not sure where that should end up ---
 // apollo-server-sha as its own tiny module? apollo-server-env seems bad because
 // that would add sha.js to unnecessary places, I think?
 import { createHash } from 'crypto';
+import type { FieldNode, FragmentDefinitionNode } from 'graphql';
 
 interface Options<TContext = Record<string, any>> {
   // Underlying cache used to save results. All writes will be under keys that
@@ -126,7 +128,17 @@ interface CacheValue {
 type CacheKey = BaseCacheKey & ContextualCacheKey;
 
 function cacheKeyString(key: CacheKey) {
-  return sha(JSON.stringify(key));
+    const parsed = gql `${key.source}`;
+    let cacheKey ='';
+    let node: FragmentDefinitionNode = <FragmentDefinitionNode> parsed.definitions[0];
+    let params: FieldNode = <FieldNode> node.selectionSet.selections[0];
+    if (params !== null && params !== undefined && params.arguments !== null && params.arguments !== undefined) {
+      params.arguments.forEach((argument : any) => {
+        cacheKey += argument.name.value + ":"+ argument.value.value+":";
+      })
+    }
+    console.log(cacheKey);
+    return cacheKey+sha(JSON.stringify(key));
 }
 
 function isGraphQLQuery(requestContext: GraphQLRequestContext<any>) {
