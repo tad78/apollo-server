@@ -2,9 +2,9 @@
   "name": "apollo-server-monorepo",
   "private": true,
   "license": "MIT",
-  "repository": "github:apollographql/apollo-server",
+  "repository": "github:tad78/apollo-server",
   "scripts": {
-    "clean": "git clean -dfqX -- ./node_modules **/{dist,node_modules}/ **/tsconfig*tsbuildinfo",
+    "clean": "echo",
     "compile": "tsc --build tsconfig.build.json",
     "compile:clean": "tsc --build tsconfig.build.json --clean",
     "watch": "tsc --build tsconfig.build.json --watch",
